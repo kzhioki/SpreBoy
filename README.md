@@ -1,6 +1,6 @@
 # Spreboy
 
-Spresenseƒ{[ƒh‚ÅƒQ[ƒ€ƒRƒ“ƒ\[ƒ‹‚ð“®‚©‚·‚½‚ß‚ÌŠÈ’P‚ÈƒTƒ“ƒvƒ‹ƒR[ƒh‚Å‚·B
+Spresenseãƒœãƒ¼ãƒ‰ã§ã‚²ãƒ¼ãƒ ã‚³ãƒ³ã‚½ãƒ¼ãƒ«ã‚’å‹•ã‹ã™ãŸã‚ã®ç°¡å˜ãªã‚µãƒ³ãƒ—ãƒ«ã‚³ãƒ¼ãƒ‰ã§ã™ã€‚
 
 ```
 |-- README.md
@@ -19,31 +19,31 @@ Spresenseƒ{[ƒh‚ÅƒQ[ƒ€ƒRƒ“ƒ\[ƒ‹‚ð“®‚©‚·‚½‚ß‚ÌŠÈ’P‚ÈƒTƒ“ƒvƒ‹ƒR[ƒh‚Å‚·B
     `-- SpreAudio.h
 ```
 
-examples ‚ÌƒeƒgƒŠƒX‚ÆƒuƒƒbƒN•ö‚µ‚Í Handheld-Color-Console ‚ðƒx[ƒX‚É Spresense —p‚ÉˆÚA‚µ‚½‚à‚Ì‚Å‚·B
+examples ã®ãƒ†ãƒˆãƒªã‚¹ã¨ãƒ–ãƒ­ãƒƒã‚¯å´©ã—ã¯ Handheld-Color-Console ã‚’ãƒ™ãƒ¼ã‚¹ã« Spresense ç”¨ã«ç§»æ¤ã—ãŸã‚‚ã®ã§ã™ã€‚
 
 * https://github.com/vilaca/Handheld-Color-Console
 
-ILI9341 LCD ‚Ö‚Ì•`‰æ‚ÍˆÈ‰º‚Ìƒ‰ƒCƒuƒ‰ƒŠ‚ðŽg—p‚µ‚Ä‚¢‚Ü‚·B
-‚±‚ê‚ç‚Ìƒ‰ƒCƒuƒ‰ƒŠ‚àƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚­‚¾‚³‚¢B
+ILI9341 LCD ã¸ã®æç”»ã¯ä»¥ä¸‹ã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’ä½¿ç”¨ã—ã¦ã„ã¾ã™ã€‚
+ã“ã‚Œã‚‰ã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚‚ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ãã ã•ã„ã€‚
 
 * https://github.com/kzhioki/Adafruit_ILI9341
 * https://github.com/kzhioki/Adafruit-GFX-Library
 
-patches ˆÈ‰º‚ÍƒIƒvƒVƒ‡ƒ“‚Æ‚µ‚Ä—pˆÓ‚µ‚Ä‚¢‚Ü‚·B
+patches ä»¥ä¸‹ã¯ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã¨ã—ã¦ç”¨æ„ã—ã¦ã„ã¾ã™ã€‚
 
 * 0001-Update-for-repeat-playback.patch
- * Œø‰Ê‰¹‚È‚Ç¬ƒTƒCƒY‚ÌMP3ƒtƒ@ƒCƒ‹‚ðÄ¶‚·‚éê‡‚É“K—p‚µ‚Ä‚­‚¾‚³‚¢
+ - åŠ¹æžœéŸ³ãªã©å°ã‚µã‚¤ã‚ºã®MP3ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å†ç”Ÿã™ã‚‹å ´åˆã«é©ç”¨ã—ã¦ãã ã•ã„
 * 0002-Remove-mute-control-from-audio-library.patch
- * Audioƒ‰ƒCƒuƒ‰ƒŠ“à‚Ìmute§Œä‚ð‚â‚ß‚ÄAƒXƒPƒbƒ`‘¤‚Åmute§Œä‚µ‚Ü‚·
- * –³‰¹ó‘Ô‚Å“dŒ¹“ü‚èØ‚è‚µ‚½‚Æ‚«‚Ìƒ{ƒc‰¹‚ª‹C‚É‚È‚éê‡‚É“K—p‚µ‚Ä‚­‚¾‚³‚¢
+ - Audioãƒ©ã‚¤ãƒ–ãƒ©ãƒªå†…ã®muteåˆ¶å¾¡ã‚’ã‚„ã‚ã¦ã€ã‚¹ã‚±ãƒƒãƒå´ã§muteåˆ¶å¾¡ã—ã¾ã™
+ - ç„¡éŸ³çŠ¶æ…‹ã§é›»æºå…¥ã‚Šåˆ‡ã‚Šã—ãŸã¨ãã®ãƒœãƒ„éŸ³ãŒæ°—ã«ãªã‚‹å ´åˆã«é©ç”¨ã—ã¦ãã ã•ã„
 * 0003-Reduce-application-RAM-size-for-audio-buffer.patch
- * Audioƒ‰ƒCƒuƒ‰ƒŠ‚ªŽg—p‚·‚éƒƒ‚ƒŠƒTƒCƒY‚ðí‚Á‚Ä‚¢‚Ü‚·
- * ƒƒ‚ƒŠƒTƒCƒY‚ª‘«‚è‚È‚­‚È‚Á‚½ê‡‚É“K—p‚µ‚Ä‚­‚¾‚³‚¢
+ - Audioãƒ©ã‚¤ãƒ–ãƒ©ãƒªãŒä½¿ç”¨ã™ã‚‹ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºã‚’å‰Šã£ã¦ã„ã¾ã™
+ - ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºãŒè¶³ã‚Šãªããªã£ãŸå ´åˆã«é©ç”¨ã—ã¦ãã ã•ã„
 * 0004-Reduce-shared-RAM-size-for-audio-buffer.patch
- * Audioƒ‰ƒCƒuƒ‰ƒŠ‚ªŽg—p‚·‚éƒƒ‚ƒŠƒTƒCƒY‚ðí‚Á‚Ä‚¢‚Ü‚·
- * ƒƒ‚ƒŠƒTƒCƒY‚ª‘«‚è‚È‚­‚È‚Á‚½ê‡‚É“K—p‚µ‚Ä‚­‚¾‚³‚¢
+ - Audioãƒ©ã‚¤ãƒ–ãƒ©ãƒªãŒä½¿ç”¨ã™ã‚‹ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºã‚’å‰Šã£ã¦ã„ã¾ã™
+ - ãƒ¡ãƒ¢ãƒªã‚µã‚¤ã‚ºãŒè¶³ã‚Šãªããªã£ãŸå ´åˆã«é©ç”¨ã—ã¦ãã ã•ã„
 
-‚Ü‚½A‘S patch “K—pÏ‚Ý‚Ì Audio ƒ‰ƒCƒuƒ‰ƒŠ‚ð zip ‰»‚µ‚Ä‚¢‚Ü‚·
+ã¾ãŸã€å…¨ patch é©ç”¨æ¸ˆã¿ã® Audio ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã‚’ zip åŒ–ã—ã¦ã„ã¾ã™
 * AudioCustom.zip
- * %USERPROFILE%\AppData\Local\Arduino15\packages\SPRESENSE\hardware\spresense\1.1.3\libraries\Audio ‚Æ·‚µ‘Ö‚¦‚ÄŽg—p‚µ‚Ä‚­‚¾‚³‚¢
+ - %USERPROFILE%\AppData\Local\Arduino15\packages\SPRESENSE\hardware\spresense\1.1.3\libraries\Audio ã¨å·®ã—æ›¿ãˆã¦ä½¿ç”¨ã—ã¦ãã ã•ã„
 
