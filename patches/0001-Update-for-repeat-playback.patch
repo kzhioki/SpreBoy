@@ -1,0 +1,29 @@
+From cd5d19dc66aba3a5e02683d618b78f293d763ca9 Mon Sep 17 00:00:00 2001
+From: Kazuya Hioki <Kazuya.Hioki@sony.com>
+Date: Fri, 25 Jan 2019 15:14:22 +0900
+Subject: [PATCH 1/4] Update for repeat playback
+
+To realize the repeat playback effectively, it prevents the file
+from being closed when file is end.
+---
+ .../SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.cpp      | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.cpp b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.cpp
+index 00dd3ac..3e48164 100644
+--- a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.cpp
++++ b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.cpp
+@@ -1361,7 +1361,9 @@ err_t AudioClass::write_fifo(File& myFile, char *p_es_buf, uint32_t write_size,
+ 
+   if(ret == 0)
+     {
+-      myFile.close();
++      // To realize the repeat playback effectively,
++      // prevent the file from being closed here.
++      //myFile.close();
+       return AUDIOLIB_ECODE_FILEEND;
+     }
+ 
+-- 
+2.7.4
+

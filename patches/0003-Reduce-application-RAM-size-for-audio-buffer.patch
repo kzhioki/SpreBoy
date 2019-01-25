@@ -1,0 +1,25 @@
+From eac67dd044668a4487b1b02b91b678b1f5ef04d2 Mon Sep 17 00:00:00 2001
+From: Kazuya Hioki <Kazuya.Hioki@sony.com>
+Date: Fri, 25 Jan 2019 15:16:25 +0900
+Subject: [PATCH 3/4] Reduce application RAM size for audio buffer
+
+---
+ .../packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.h b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.h
+index 2675bb0..794adc0 100644
+--- a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.h
++++ b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/Audio.h
+@@ -49,7 +49,7 @@
+ #define WRITE_FIFO_FRAME_SIZE (1024*2*3)
+ #define WRITE_BUF_SIZE   (WRITE_FIFO_FRAME_NUM * WRITE_FIFO_FRAME_SIZE)
+ 
+-#define READ_FIFO_FRAME_NUM   (10)
++#define READ_FIFO_FRAME_NUM   (1)
+ #define READ_FIFO_FRAME_SIZE  (1024*2*8)
+ #define READ_BUF_SIZE    (READ_FIFO_FRAME_NUM * READ_FIFO_FRAME_SIZE)
+ 
+-- 
+2.7.4
+
