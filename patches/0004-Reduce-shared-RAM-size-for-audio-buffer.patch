@@ -1,19 +1,7 @@
-From 05b774ceb1c40cdcb62059a8e82d8cfafdf3f4db Mon Sep 17 00:00:00 2001
-From: Kazuya Hioki <Kazuya.Hioki@sony.com>
-Date: Fri, 25 Jan 2019 15:17:06 +0900
-Subject: [PATCH 4/4] Reduce shared RAM size for audio buffer
-
-Change memory layout from 2 tiles of 128KB to 1 tile
----
- .../spresense/1.0.0/libraries/Audio/MemoryUtil.cpp |   2 +-
- .../1.0.0/libraries/Audio/memutil/mem_layout.h     | 174 ++++++++++-----------
- .../1.0.0/libraries/Audio/memutil/pool_layout.h    |  40 ++---
- 3 files changed, 108 insertions(+), 108 deletions(-)
-
-diff --git a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/MemoryUtil.cpp b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/MemoryUtil.cpp
+diff --git a/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/MemoryUtil.cpp b/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/MemoryUtil.cpp
 index b5dbb6e..1bd9f73 100644
---- a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/MemoryUtil.cpp
-+++ b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/MemoryUtil.cpp
+--- a/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/MemoryUtil.cpp
++++ b/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/MemoryUtil.cpp
 @@ -38,7 +38,7 @@ int initMemoryPools(void)
  {
    mpshm_t s_shm;
@@ -23,10 +11,10 @@ index b5dbb6e..1bd9f73 100644
    if (ret < 0)
      {
        printf("mpshm_init() failure. %d\n", ret);
-diff --git a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/memutil/mem_layout.h b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/memutil/mem_layout.h
+diff --git a/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/memutil/mem_layout.h b/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/memutil/mem_layout.h
 index d08d15d..654ee6c 100755
---- a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/memutil/mem_layout.h
-+++ b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/memutil/mem_layout.h
+--- a/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/memutil/mem_layout.h
++++ b/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/memutil/mem_layout.h
 @@ -39,17 +39,17 @@
  /*
   * Memory devices
@@ -312,10 +300,10 @@ index d08d15d..654ee6c 100755
  
  /* Layout3: */
  #define MEMMGR_L3_WORK_SIZE   0x00000184
-diff --git a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/memutil/pool_layout.h b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/memutil/pool_layout.h
+diff --git a/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/memutil/pool_layout.h b/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/memutil/pool_layout.h
 index 72f969e..8a3e7b5 100755
---- a/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/memutil/pool_layout.h
-+++ b/Arduino15/packages/SPRESENSE/hardware/spresense/1.0.0/libraries/Audio/memutil/pool_layout.h
+--- a/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/memutil/pool_layout.h
++++ b/Arduino15/packages/SPRESENSE/hardware/spresense/1.1.3/libraries/Audio/memutil/pool_layout.h
 @@ -45,32 +45,32 @@ MemPool* static_pools[NUM_MEM_POOLS];
  extern const PoolAttr MemoryPoolLayouts[NUM_MEM_LAYOUTS][NUM_MEM_POOLS] = {
   {/* Layout:0 */
